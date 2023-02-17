@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js" defer></script>
+    <title>QRExpress | QR Code Generator</title>
+</head>
+<body>
+    <nav>
+        <div id="cover">
+             <h1 id="logo"><span id="qr">QR</span>Express</h1>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="generator">
+                <h1 id="title"><span id="qr">QR</span>Code Generator</h1>
+                <p>Enter your website bellow to get an unique QR Code you can use anywhere you like.</p>
+                <form action="" class="qr-form">
+                    <input id='url-input' type="url" placeholder="Enter your website URL">
+                    <select id="size">
+                        <option value="100">100x100</option>
+                        <option value="200" selected>200x200</option>
+                        <option value="300">300x300</option>
+                        <option value="400">400x400</option>
+                        <option value="500">500x500</option>
+                        <option value="600">600x600</option>
+                    </select>
+                    <button type="submit">Generate</button>
+                </form>
+            </div>
+            <div class="qr-image">
+                <img id='qr-pic' src="./uuid-27fbb3f7-0770-42fa-9dec-47e7b5cb9957.png" alt="">
+            </div>
+        </div>
+        <img src="./spinner.svg" alt="" class="spinner">
+        <div class="qrcode-container">
+            <div class="qr-background">
+                <div id="qrcode">
+                
+                </div>
+            </div>
+            <div class='buttons'></div>
+                <!-- <button id='download-btn'>Download</button> -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

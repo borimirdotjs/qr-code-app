@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: #CDE0FB;
+    min-height: calc(100vh - 45px);
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    background-color: white;
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+#cover {
+    display:flex;
+    width: 100%;
+    max-width: 985px;
+}
+
+#logo{
+    padding: 0 20px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #555555;
+    cursor: pointer;
+    user-select: none;
+}
+
+#qr {
+    font-weight: 700;
+    color: #F99746;
+}
+
+ /*content */
+.content {
+    display:flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.generator {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-top: 30px;
+    
+}
+
+.generator h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.generator p {
+    font-size: 18px;
+    color: #838383;
+    margin-top:15px;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top:30px;
+}
+
+form input, select, button  {
+    height: 32px;
+    background-color: white;
+    color: #555555;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Jost';
+    border: none;
+    line-height: 26px;
+
+}
+
+form input::placeholder{
+    color: rgba(85, 85, 85, 0.64);
+}
+
+form input:focus, select:focus {
+    outline: none;
+}
+
+form > button {
+    background-color:#F99746;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s background-color ease-in;
+}
+
+form > button:hover{
+    background-color: #b76d31;
+}
+
+.qr-image{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#qr-pic {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.qrcode-container {
+    margin: 0 20px;
+    background-color: black;
+    padding: 10px;
+    background: #EBF3FA;
+    border-radius: 15px;
+    align-items: center;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 220px;
+    max-width: 600px;
+}
+
+.qr-background {
+    background: #ED7D2B;
+    margin: 10px 0 20px 0;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+
+#download-btn{
+    background-color:#F99746;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+}
+
+#download-btn:hover{
+    background-color: #b76d31;
+}
+
+#qrcode {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    animation: fadein 1s ease-in forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.spinner {
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F99746;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    height: 32px;
+    transition: 0.2s background-color ease-in;
+
+}
+
+a:hover{
+    background-color: #b76d31;
+
+}
+
+@media (min-width: 479px) {
+    .qr-background{
+        margin-right: 20px;
+    }
+}
+
